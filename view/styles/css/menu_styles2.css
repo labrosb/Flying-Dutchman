@@ -1,0 +1,457 @@
+
+html {
+    background-attachment: fixed;
+    background-image: url("../images/beach-back.jpg");
+    background-position: center top;
+    background-size: cover;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+#header {
+    height: 133px;
+}
+#header h1 {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border-radius: 30px;
+    color: rgb(245, 240, 240);
+    float: left;
+    font-size: 40px;
+    font-style: italic;
+    left: 38px;
+    padding: 3px 22px 7px 22px;
+    position: relative;
+    text-align: left;
+    text-shadow: 3px 3px 3px rgb(158, 139, 139);
+}
+#themes {
+    float: left;
+    left: 150px;
+    position: relative;
+    top: 52px;
+    width: 225px;
+}
+#theme1, #theme2 {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-size: 0.75em;
+    margin-left: 7.5px;
+    padding: 6px 9px;
+}
+#languages {
+    float: right;
+    right: 40px;
+    position: relative;
+    top: 49px;
+}
+#english {
+    background-image: url("../images/uk.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 37.5px  37.5px;
+    float: right;
+    height:  37.5px;
+    width:  37.5px;
+}
+#swedish {
+    background-image: url("../images/se.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:  37.5px  37.5px;
+    float: right;
+    height:  37.5px;
+    margin-right: 12px;
+    width:  37.5px;
+}
+#english:hover, #swedish:hover {
+    cursor: pointer;
+}
+.topLabel {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 25px;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 26px;
+    margin-top: 11px;
+    padding: 7.5px;
+    text-align: center;
+}
+#cartLabel {
+    margin-left: 15px;
+    width: 142px;
+}
+#productsMenu h2 {
+    margin-left: 90px;
+    width: 154px;
+}
+#categories h2 {
+    margin-left: 22.5px;
+    width: 105x;
+}
+#categories {
+    float: left;
+}
+.categories_menu {
+    float: left;
+    list-style-type: none;
+    margin-right: 1px;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+    width: 188px;
+}
+.categories_menu li {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 6px;
+    margin-left: 1px;
+    opacity: 0.95;
+    padding: 17px 0;
+    text-align: center;
+}
+.categories_menu li:hover {
+    background-color: black;
+    cursor: pointer;
+}
+#productsMenu {
+    width: 548px;
+}
+#productsField {
+    height: 450px;
+    margin-top: -15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#products {
+    display: none;
+}
+#loading {
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#loading p {
+    color: black;
+    float: left;
+    font-size: 27px;
+    font-style: italic;
+    margin-left: 37.5px;
+    margin-top: 150px;
+}
+.product_overview {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border-radius: 12px;
+    float: left;
+    height: 199px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-top: 15px;
+    opacity: 0.95;
+    width: 139px;
+}
+.product_overview p {
+    font-size: 13.5px;
+    margin: 0;
+}
+#productId {
+    display: none;
+}
+#pic_area {
+    height: 150px;
+    width: 128px;
+}
+#pic_area img {
+    height: 97%;
+    left: 30px;
+    position: relative;
+    top: 2.5px;
+    width: auto;
+    z-index: 998;
+}
+#price {
+    color: #fff;
+    float: right;
+    margin-right: 11px;
+    margin-top: 24px;
+    padding: 4px;
+    position: relative;
+}
+#price p {
+    font-size: 14px;
+}
+#label {
+    color: #fff;
+    margin-top: 4px;
+    position: relative;
+    text-align: center;
+}
+#details {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border-radius: 12px;
+    color: #fff;
+    height: 91px;
+    left: 35px;
+    opacity: 0.95;
+    position: relative;
+    top: 4px;
+    width: 487px;
+}
+#details #detailsLabel p {
+    font-size: 22.5px;
+    font-style: italic;
+    margin-top: 22.5px;
+    text-align: center;
+}
+#detailsInner {
+    display: none;
+}
+#details #detailsInner table {
+    color: #fff;
+    float: left;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 1px;
+    margin-left: 26px;
+    margin-top: 1px;
+}
+#details #detailsInner table tr td {
+    margin: 0;
+}
+#eco {
+    background-image: url("../images/ecofriendly.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    float: right;
+    height: 115px;
+    width: 91px;
+	margin-right: 110px;
+	display: none;
+}
+#details .detTitle {
+    text-align: right;
+}
+.panel-body {
+    background-color: #fff;
+    visibility: hidden;
+}
+.total {
+    color: #fff;
+    margin: 15px 0 0;
+    padding-right: 15px;
+    text-align: right;
+    visibility: hidden;
+}
+.btn {
+    float: right;
+    margin: 0 7.5px 7.5px 0;
+}
+.btndiv {
+    bottom: 0;
+    margin: 0 7.5px 7.5px 0;
+    position: absolute;
+    right: 0;
+}
+div.msgBox {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    color: #fff;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+}
+div.msgBoxTitle {
+    color: #fff;
+}
+div.msgBoxButtons input[type="button"] {
+    background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
+    border-radius: 10px;
+    color: #050505;
+    cursor: pointer;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    height: 30px;
+    margin: 2px;
+    width: 90px;
+}
+.cart {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
+    border-radius: 12px;
+    height: 100%;
+    left: 0;
+    opacity: 0.96;
+    padding: 0 7.5px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.cart .remove:hover {
+    cursor: pointer;
+}
+.cart h1 {
+    color: #555;
+    padding-top: 15px;
+    text-align: center;
+}
+#cartMsg h2 {
+    color: #555;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+#cartMsg {
+    background-image: url("../images/cart.png");
+    background-position: 37.5px 37.5px;
+    background-repeat: no-repeat;
+    background-size: 105px 90px;
+    height: 120px;
+    left: 37.5px;
+    opacity: 0.8;
+    position: absolute;
+    top: 174px;
+    width: 165px;
+}
+
+.total {
+    margin: 15px 0 0;
+    padding-right: 20px;
+    text-align: right;
+}
+.btn, .remove {
+    background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
+    border-radius: 28px;
+    color: #050505;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-size: 14px;
+    opacity: 0.85;
+    padding: 5px 13px;
+    text-decoration: none;
+}
+.btn {
+    float: right;
+    margin: 0 7.5x 7.5x 0;
+}
+.remove {
+    margin-left: 7.5x;
+    margin-right: 7.5x;
+}
+.btn:hover, .remove:hover {
+    background: #96622c none repeat scroll 0 0;
+    cursor: pointer;
+}
+.btndiv {
+    bottom: 7.5x;
+    margin: 0 7.5x 7.5x 0;
+    position: absolute;
+    right: 0;
+}
+.btnpay {
+    bottom: 0;
+    margin: 0 7.5x 7.5x 0;
+    position: absolute;
+    right: 0;
+}
+
+/*loading spinner*/
+
+.spinner1 {
+    height: 75px;
+    left: 248px;
+    position: relative;
+    top: 248px;
+    width: 75px;
+}
+.container1 > div, .container2 > div, .container3 > div {
+    animation: 1.2s ease-in-out 0s normal both infinite running bouncedelay;
+    background-color: #e6d8cb;
+    border-radius: 100%;
+    height: 15px;
+    position: absolute;
+    width: 15px;
+}
+.spinner1 .spinner-container {
+    height: 75%;
+    margin-left: 9px;
+    margin-top: 9px;
+    position: absolute;
+    width: 75%;
+}
+.container2 {
+    transform: rotateZ(45deg);
+}
+.container3 {
+    transform: rotateZ(90deg);
+}
+.circle1 {
+    left: 0;
+    top: 0;
+}
+.circle2 {
+    right: 0;
+    top: 0;
+}
+.circle3 {
+    bottom: 0;
+    right: 0;
+}
+.circle4 {
+    bottom: 0;
+    left: 0;
+}
+.container2 .circle1 {
+    animation-delay: -1.1s;
+}
+.container3 .circle1 {
+    animation-delay: -1s;
+}
+.container1 .circle2 {
+    animation-delay: -0.9s;
+}
+.container2 .circle2 {
+    animation-delay: -0.8s;
+}
+.container3 .circle2 {
+    animation-delay: -0.7s;
+}
+.container1 .circle3 {
+    animation-delay: -0.6s;
+}
+.container2 .circle3 {
+    animation-delay: -0.5s;
+}
+.container3 .circle3 {
+    animation-delay: -0.4s;
+}
+.container1 .circle4 {
+    animation-delay: -0.3s;
+}
+.container2 .circle4 {
+    animation-delay: -0.2s;
+}
+.container3 .circle4 {
+    animation-delay: -0.1s;
+}
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}

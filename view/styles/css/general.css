@@ -1,0 +1,28 @@
+#content{
+	position:relative;	
+	width:970px;
+	margin:0 auto;
+}
+#left{
+	position:relative;
+	left:0;
+	float:left;
+	width:211px;
+	height:487px;
+	margin:0;
+}
+#center{
+	position:relative;
+	left:15px;
+	float:left;
+	width:562px;
+	margin:0;
+}
+#right{
+	position:relative;
+	left:10px;
+	float:left;
+	width:auto;
+	height:487px;
+	margin:0;
+}
