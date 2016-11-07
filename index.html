@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		
 		<title>Flying Dutchman</title>
 
-		<link rel="stylesheet" href="view/styles/css/general.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="view/styles/css/dragAndDrop.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="view/styles/css/cart.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="view/styles/css/menu_styles.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="view/styles/css/animate.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="view/styles/css/msgBoxLight.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="view/styles/css/general.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="view/styles/css/dragAndDrop.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="view/styles/css/cart.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="view/styles/css/animate.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="view/styles/css/msgBoxLight.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="view/styles/css/menu_styles.css" type="text/css" title="standard" media="screen" >
+		<link rel="alternate stylesheet" href="view/styles/css/menu_styles2.css" type="text/css" title="dark" media="screen" >
 		
 		<script type="text/JavaScript" src="jQuery/jquery-1.11.2.min.js"></script> 
 		<script type="text/JavaScript" src="jQuery/query-ui-1.9.1.custom.min.js"></script> 
@@ -25,7 +27,7 @@
 
 	<body>
 		<div id ="content">
-			<div id = "header"  style ="text-align: center; width:100%"> 
+			<div id = "header"> 
 				<h1>Flying Dutchman</h1> 
 			
 				<div id = "Menu">
@@ -36,8 +38,6 @@
 						<div>
 							<button type="submit" onclick="switch_style('standard'); return false;" name="theme" id="theme1"> Dark Theme </button>
 						</div>
-						<link rel="stylesheet" type="text/css" href="view/styles/css/menu_styles.css" title="standard" media="screen" >
-						<link rel="alternate stylesheet" type="text/css" href="view/styles/css/menu_styles2.css" title="dark" media="screen" >
 					</div>
 					<div id = "languages">						
 						<div id = "english" onclick="changeLang('en')"> </div>
@@ -51,19 +51,19 @@
 				<div class="cart">
 					<div id = "space"> </div>
 					<div>
-						<table id="cartcontent" fitColumns="true" style="width:100%; height:auto;">
+						<table id="cartcontent" fitColumns="true">
 							<thead>
 								<tr>
-									<th field="name" width=102 align="left"> 
+									<th field="name" align="left"> 
 										<div data-inter='cartName' class="tableLabelText"> Name </div>
 									</th>
-									<th field="quantity" width=45 align="center"> 
+									<th field="quantity" align="center"> 
 										<div data-inter='cartQuantity' class="tableLabelText"> Quantity </div>
 									</th>
-									<th field="price" width=45 align="center"> 
+									<th field="price" align="center"> 
 										<div data-inter='cartPrice' class="tableLabelText"> Price </div>
 									</th>
-									<th field="remove" width=45 align="center"> 
+									<th field="remove" align="center"> 
 										<div data-inter='cartRemove' class="tableLabelText"> Remove </div>
 									</th>
 								</tr>
@@ -126,11 +126,12 @@
 								<tr>
 									<td data-inter='alcohol' class = "detTitle"> Alcohol &nbsp : &nbsp </td>
 									<td id = "alcoholField"></td>
-								</tr>		
+								</tr>	
+								<tr>								
 									<td data-inter='origin' class = "detTitle"> Origin &nbsp : &nbsp </td>
 									<td id = "originField"></td>
 								</tr>		
-								</tr>		
+								<tr>		
 									<td data-inter='producer' class = "detTitle"> Producer &nbsp : &nbsp </td>
 									<td id = "producerField"></td>
 								</tr>					
@@ -166,8 +167,6 @@
 		<script type="text/javascript" src="controller/cartHandler.js"> </script>	 
 
 		<script> changeLang('en'); </script>
-		<style media="screen" type="text/css">
 
-		</style>
 	</body>
 </html>
