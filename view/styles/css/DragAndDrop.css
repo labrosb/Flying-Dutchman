@@ -124,6 +124,7 @@
   background-color: #ffffff;
   color: #000000;
   font-size: 12px;
+  z-index:9999;
 }
 .panel-title {
   font-size: 12px;
@@ -214,7 +215,6 @@
 }
 .datagrid-header-inner {
   float: left;
-  width: 10000px;
 }
 .datagrid-header-row,
 .datagrid-row {
@@ -275,7 +275,6 @@
 .datagrid-footer-inner {
   border-width: 1px 0 0 0;
   border-style: solid;
-  width: 10000px;
   float: left;
 }
 .datagrid-row-editing .datagrid-cell {

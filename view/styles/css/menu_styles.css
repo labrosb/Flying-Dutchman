@@ -12,7 +12,10 @@ html {
 
 #header {
     height: 133px;
+	width:100%;
+	text-align: center; 
 }
+
 #header h1 {
     background-color: rgb(3, 0, 0);
     border: 1px solid black;
@@ -103,7 +106,7 @@ html {
 }
 #categories h2 {
     margin-left: 23px;
-    width: 105px;
+    width: 115px;
 }
 #categories {
     float: left;
@@ -315,10 +318,11 @@ div.msgBoxButtons input[type="button"] {
     background-size: 105px 90px;
 	margin-left: -7.5px;
     height: 120px;
+	width:100%;
     opacity: 0.5;
     position: absolute;
     top: 174px;
-	width:100%;
+	z-index:1;
 }
 
 .panel-body {

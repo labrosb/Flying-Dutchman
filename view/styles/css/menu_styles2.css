@@ -12,6 +12,8 @@ html {
 }
 #header {
     height: 133px;
+	width:100%;
+	text-align: center; 	
 }
 #header h1 {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
@@ -78,6 +80,7 @@ html {
     border: 0 none;
     border-radius: 25px;
     color: #fff;
+	font-size: 18px;
     font-style: italic;
     margin-bottom: 26px;
     margin-top: 11px;
@@ -86,15 +89,15 @@ html {
 }
 #cartLabel {
     margin-left: 15px;
-    width: 142px;
+    width: 140px;
 }
 #productsMenu h2 {
     margin-left: 90px;
-    width: 154px;
+    width: 150px;
 }
 #categories h2 {
     margin-left: 22.5px;
-    width: 105x;
+    width: 120px;
 }
 #categories {
     float: left;
@@ -270,6 +273,7 @@ div.msgBox {
 }
 div.msgBoxTitle {
     color: #fff;
+	font-size: 20px;
 }
 div.msgBoxButtons input[type="button"] {
     background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
@@ -313,11 +317,12 @@ div.msgBoxButtons input[type="button"] {
     background-repeat: no-repeat;
     background-size: 105px 90px;
     height: 120px;
+    width: 165px;
     left: 37.5px;
     opacity: 0.8;
     position: absolute;
     top: 174px;
-    width: 165px;
+	z-index:1;	
 }
 
 .total {
@@ -329,33 +334,34 @@ div.msgBoxButtons input[type="button"] {
     background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
     border-radius: 28px;
     color: #050505;
-    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
-    font-size: 14px;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;    
+	font-size: 10px;
     opacity: 0.85;
-    padding: 5px 13px;
+    padding: 5px 14px;
     text-decoration: none;
+    text-shadow: 1px 1px 3px #faf5fa;
 }
 .btn {
     float: right;
-    margin: 0 7.5x 7.5x 0;
+    margin: 0 7.5px 7.5px 0;
 }
 .remove {
-    margin-left: 7.5x;
-    margin-right: 7.5x;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
 }
 .btn:hover, .remove:hover {
     background: #96622c none repeat scroll 0 0;
     cursor: pointer;
 }
 .btndiv {
-    bottom: 7.5x;
-    margin: 0 7.5x 7.5x 0;
+    bottom: 7.5px;
+    margin: 0 7.5px 7.5px 0;
     position: absolute;
     right: 0;
 }
 .btnpay {
     bottom: 0;
-    margin: 0 7.5x 7.5x 0;
+    margin: 0 7.5px 7.5px 0;
     position: absolute;
     right: 0;
 }
