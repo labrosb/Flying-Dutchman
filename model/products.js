@@ -1,5 +1,6 @@
 
 //// Themes ////
+
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
 
@@ -13,6 +14,7 @@ function getCookieDuration(){
 
 
 //// Cart global variables ////
+
 $cartData = {"total":0,"rows":[]};
 $totalCost = 0; //T
 
@@ -34,6 +36,7 @@ function setTotalCost($newCost){
 
 
 //// Products ////
+
 $allProducts = "";
 $details = "";
 
@@ -43,7 +46,8 @@ retrieveAllProducts();
 
 $favoriteProducts = startupFavorites($startTime);
 
-//Not very efficient but the only way to retrieve the categories
+// Not very efficient but the only way to retrieve the categories
+
 for ($i=0; $i<$allProducts.length; $i++){
 	if($allProducts[$i].namn != ""){
 		enrichProduct($allProducts[$i].beer_id, $i);
@@ -59,7 +63,7 @@ function getFavoriteProducts(){
 }
 
 function retrieveAllProducts(){
-	$.ajax({	 //calls the API's url to retrieve all the products
+	$.ajax({	 								// calls the API's url to retrieve all the products
 		dataType: "json",
 		type: "GET",
 		url: "http://pub.jamaica-inn.net/fpdb/api.php",
@@ -69,14 +73,14 @@ function retrieveAllProducts(){
 			action: "inventory_get"
 		},
 		async: false,
-		success: function(response){ 	// the response is all the products retrieved from the API
+		success: function(response){ 			// the response is all the products retrieved from the API
 					$allProducts = response.payload;
 				}
 	});	
 }
 
 function enrichProduct($productId, $pointer){	 // includes the group option to all products
-	$.ajax({ 	//calls the API's url to retrieve product's data
+	$.ajax({ 									// calls the API's url to retrieve product's data
 		dataType: "json",
 		type: "GET",
 		url: "http://pub.jamaica-inn.net/fpdb/api.php",
@@ -87,7 +91,7 @@ function enrichProduct($productId, $pointer){	 // includes the group option to a
 			beer_id: $productId
 		},
 		async: true,
-		success: function(product){ 	// the response is the details of the product retrieved from the API									 
+		success: function(product){ 			// the response is the details of the product retrieved from the API									 
 					if(product.payload.length > 0){	
 						$allProducts[$pointer].varugrupp = product.payload[0].varugrupp;						
 					}
@@ -97,7 +101,7 @@ function enrichProduct($productId, $pointer){	 // includes the group option to a
 
 function retrieveAllPurchases(){
 	$allPurchases = ""; 
-	$.ajax({ 	//calls the API's url to retrieve all the purchases
+	$.ajax({ 									// calls the API's url to retrieve all the purchases
 		dataType: "json",
 		type: "GET",
 		url: "http://pub.jamaica-inn.net/fpdb/api.php",
@@ -107,7 +111,7 @@ function retrieveAllPurchases(){
 			action: "purchases_get"
 		},
 		async: false,
-		success: function(response){ 	// the response is all the products retrieved from the API
+		success: function(response){ 			// the response is all the products retrieved from the API
 									
 					$allPurchases = response.payload; 															
 				}
@@ -117,7 +121,7 @@ function retrieveAllPurchases(){
 
 function retrieveProductDetails($productId){
 	$details = "";
-	$.ajax({ //calls the API's url to retrieve product's data
+	$.ajax({							 		// calls the API's url to retrieve product's data
 		dataType: "json",
 		type: "GET",
 		url: "http://pub.jamaica-inn.net/fpdb/api.php",
@@ -128,7 +132,7 @@ function retrieveProductDetails($productId){
 			beer_id: $productId
 		},
 		async: false,
-		success: function(product){ 	// the response is the details of the product retrieved from the API				
+		success: function(product){ 			// the response is the details of the product retrieved from the API				
 					$details = product.payload[0]; 
 				}		
 	});		
