@@ -1,9 +1,20 @@
 
+////// Starting Popup //////
+$(window).bind("load", function() {
+$.msgBox({
+	title: "Go Full Screen",
+	content: "<br>This application is designed to be used <br> on a terminal instead of a browser. <br> For better experience it's recommended to use full screen mode pressing F11",
+	alert: "confirm",
+
+});
+});
+
 ////// Product menu events //////
+
 $( "#products" ).on( 'click', '.product_overview', function () { 	// Click on a a product (use this metho because is dynamic content)
-	$productId = $(this).attr("id");	 								// The product id of the product that that is chosen..
 	
-	//$('#detailsInner table').removeClass("animated zoomInRight");
+	$productId = $(this).attr("id");	 							// The product id of the product that that is chosen..
+	
 	$(this).addClass('animated bounceIn');
 	$idCatch = $(this).attr('id');
 	setTimeout(function(){ $("#"+$idCatch).removeClass('animated bounceIn');}, 600);
@@ -12,7 +23,7 @@ $( "#products" ).on( 'click', '.product_overview', function () { 	// Click on a 
 });
 
 $( "ul.categories_menu li" ).click(function() {		// Click on a category
-	$category = $(this).attr("id");	 			// The category that is chosen..
+	$category = $(this).attr("id");	 				// The category that is chosen..
 	$categoryClass = $(this).attr("class");	
 	$text = $(this).text();
 	productCategoryClass = $categoryClass;
@@ -39,6 +50,7 @@ $(window).load(function(){
 
 
 ////// Languages events //////
+
 $( "#english" ).click(function() {
 	changeLang('en');
 });
@@ -50,6 +62,7 @@ $( "#swedish" ).click(function() {
 
 
 ////// Cart checkout events  ////// -- the drag and drop events are in cart.js
+
 $( "#checkout" ).click(function() {	
 	if(getCartData()['rows'].length > 0){										
 		$.msgBox({
