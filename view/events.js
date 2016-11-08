@@ -1,12 +1,14 @@
 
 ////// Starting Popup //////
-$(window).bind("load", function() {
-$.msgBox({
-	title: "Go Full Screen",
-	content: "<br>This application is designed to be used <br> on a terminal instead of a browser. <br> For better experience it's recommended to use full screen mode pressing F11",
-	alert: "confirm",
 
-});
+$(window).bind("load", function() {
+	
+	$.msgBox({
+		title: "Go Full Screen",
+		content: "<br>This application is designed to be used <br> on a terminal instead of a browser. <br> For better experience it's recommended to use full screen mode pressing F11",
+		alert: "confirm",
+	});
+	
 });
 
 ////// Product menu events //////
