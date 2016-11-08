@@ -4,7 +4,7 @@ function productsOverview($category){
 	$cnt = 0;
 	for($i = 0; $i < getAllProducts().length; $i++) {
 		$search = getAllProducts()[$i].varugrupp;
-		if($search != undefined){  //creates a list with the products that match clicked category
+		if($search != undefined){  			//creates a list with the products that match clicked category
 			if ($search.match($category)) { 
 				$products[$cnt++] = {
 					id: getAllProducts()[$i].beer_id,
@@ -32,10 +32,10 @@ function updateDetails($product){
 	updateDetailsField($volume, $alcohol, $origin, $producer, $eco);
 }
 
-function startupFavorites($startTime){
+function startupFavorites(){
 	$purchaseList = retrieveAllPurchases();
 	$favoriteProducts = setFavoriteProducts($purchaseList);
-	makeFavoritesMenu($favoriteProducts,$startTime);
+	makeFavoritesMenu($favoriteProducts);
 	return $favoriteProducts;
 }
 
@@ -104,6 +104,6 @@ function setFavoriteProducts($purchaseList){
 	return $topDrinks;
 }
 
-function makeFavoritesMenu($products,$startTime){
-	productsMenuSet($products,$startTime);	 			
+function makeFavoritesMenu($products){
+	productsMenuSet($products);	 			
 }

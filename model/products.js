@@ -40,11 +40,9 @@ function setTotalCost($newCost){
 $allProducts = "";
 $details = "";
 
-$startTime = Date.now();
-
 retrieveAllProducts();
 
-$favoriteProducts = startupFavorites($startTime);
+$favoriteProducts = startupFavorites();
 
 // Not very efficient but the only way to retrieve the categories
 

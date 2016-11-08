@@ -58,4 +58,3 @@ function reduceCartCost(){
 	$('#cartcontent').datagrid('loadData', getCartData());
 	$('div.cart .total').html('Total: SEK'+$totalCost.toFixed(2));
 }
-

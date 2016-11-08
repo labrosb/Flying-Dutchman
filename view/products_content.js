@@ -1,4 +1,5 @@
-function productsMenuSet(products,$startTime){	
+function productsMenuSet(products){	
+
 	$productOverview = "";
 	for ( $i = 0; $i < products.length; $i++){
 		
@@ -15,9 +16,11 @@ function productsMenuSet(products,$startTime){
 		$productdraft += "<div id = 'label'><p>" + $name + $seperator + $name2 + "</p></div>" ;
 		$productOverview += "<div id = '" + $id + "' class = 'product_overview'>" + $productdraft + "</div>"
 	}
+	
 	$('#products').hide();
 	$('#loading').show();
 	$('#products').html($productOverview);
+	
 	for ( $i = 0; $i < products.length; $i++){
 		$id = products[$i].id;		
 		$("#img_"+$id).error(function() {		// Click on a category
@@ -30,9 +33,6 @@ function productsMenuSet(products,$startTime){
 	
 	$.getScript("view/cart.js");	
 
-$endTime = Date.now();
-
-console.log("delay--> "+  ($endTime - $startTime));
 }
 
 function updateDetailsField($volume, $alcohol, $origin, $producer, $eco){
