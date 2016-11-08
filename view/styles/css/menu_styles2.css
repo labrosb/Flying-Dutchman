@@ -1,4 +1,3 @@
-
 html {
     background-attachment: fixed;
     background-image: url("../images/beach-back.jpg");
@@ -12,8 +11,8 @@ html {
 }
 #header {
     height: 133px;
-	width:100%;
-	text-align: center; 	
+    text-align: center;
+    width: 100%;
 }
 #header h1 {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
@@ -23,11 +22,14 @@ html {
     font-size: 40px;
     font-style: italic;
     left: 38px;
-    padding: 3px 22px 7px 22px;
+    padding: 3px 22px 7px;
     position: relative;
     text-align: left;
     text-shadow: 3px 3px 3px rgb(158, 139, 139);
 }
+
+/* Themes */
+
 #themes {
     float: left;
     left: 150px;
@@ -47,40 +49,46 @@ html {
     margin-left: 7.5px;
     padding: 6px 9px;
 }
+
+/* Languages */
+
 #languages {
     float: right;
-    right: 40px;
     position: relative;
+    right: 40px;
     top: 49px;
 }
 #english {
     background-image: url("../images/uk.png");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 37.5px  37.5px;
+    background-size: 37.5px 37.5px;
     float: right;
-    height:  37.5px;
-    width:  37.5px;
+    height: 37.5px;
+    width: 37.5px;
 }
 #swedish {
     background-image: url("../images/se.png");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size:  37.5px  37.5px;
+    background-size: 37.5px 37.5px;
     float: right;
-    height:  37.5px;
+    height: 37.5px;
     margin-right: 12px;
-    width:  37.5px;
+    width: 37.5px;
 }
 #english:hover, #swedish:hover {
     cursor: pointer;
 }
+
+/* Label */
+
 .topLabel {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
     border: 0 none;
     border-radius: 25px;
     color: #fff;
-	font-size: 18px;
+    font-size: 18px;
     font-style: italic;
     margin-bottom: 26px;
     margin-top: 11px;
@@ -102,6 +110,9 @@ html {
 #categories {
     float: left;
 }
+
+/* Categories CSS */
+
 .categories_menu {
     float: left;
     list-style-type: none;
@@ -126,6 +137,9 @@ html {
     background-color: black;
     cursor: pointer;
 }
+
+/* Products Menu */
+
 #productsMenu {
     width: 548px;
 }
@@ -162,6 +176,7 @@ html {
     margin-left: 35px;
     margin-top: 15px;
     opacity: 0.95;
+    overflow: hidden;
     width: 139px;
 }
 .product_overview p {
@@ -203,18 +218,19 @@ html {
 #details {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
     border-radius: 12px;
+    border: 1px solid black;
     color: #fff;
-    height: 91px;
+    height: 90px;
+    width: 487px;	
     left: 35px;
     opacity: 0.95;
     position: relative;
-    top: 4px;
-    width: 487px;
+    top: 8px;
 }
 #details #detailsLabel p {
     font-size: 22.5px;
     font-style: italic;
-    margin-top: 22.5px;
+    margin-top: 23px;
     text-align: center;
 }
 #detailsInner {
@@ -223,24 +239,28 @@ html {
 #details #detailsInner table {
     color: #fff;
     float: left;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 1px;
-    margin-left: 26px;
-    margin-top: 1px;
+    margin-bottom: 2px;
+    margin-left: 35px;
+    margin-top: 2px;
+    padding-top: 2px;
 }
 #details #detailsInner table tr td {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.225px;
+    line-height: 16px;
     margin: 0;
 }
 #eco {
     background-image: url("../images/ecofriendly.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% auto;
+    display: none;
     float: right;
     height: 115px;
+    margin-right: 110px;
     width: 91px;
-	margin-right: 110px;
-	display: none;
 }
 #details .detTitle {
     text-align: right;
@@ -266,14 +286,18 @@ html {
     position: absolute;
     right: 0;
 }
+
+/* Popup styles */
+
 div.msgBox {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
     color: #fff;
     font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    line-height: 20px;
 }
 div.msgBoxTitle {
     color: #fff;
-	font-size: 20px;
+    font-size: 19px;
 }
 div.msgBoxButtons input[type="button"] {
     background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
@@ -285,6 +309,9 @@ div.msgBoxButtons input[type="button"] {
     margin: 2px;
     width: 90px;
 }
+
+/* Cart */
+
 .cart {
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #050505, #161908) repeat scroll 0 0;
     border-radius: 12px;
@@ -317,14 +344,13 @@ div.msgBoxButtons input[type="button"] {
     background-repeat: no-repeat;
     background-size: 105px 90px;
     height: 120px;
-    width: 165px;
     left: 37.5px;
     opacity: 0.8;
     position: absolute;
     top: 174px;
-	z-index:1;	
+    width: 165px;
+    z-index: 1;
 }
-
 .total {
     margin: 15px 0 0;
     padding-right: 20px;
@@ -334,8 +360,8 @@ div.msgBoxButtons input[type="button"] {
     background: #fbfaf8 linear-gradient(to bottom, #fbfaf8, #7e7970) repeat scroll 0 0;
     border-radius: 28px;
     color: #050505;
-    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;    
-	font-size: 10px;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-size: 10px;
     opacity: 0.85;
     padding: 5px 14px;
     text-decoration: none;
@@ -390,12 +416,14 @@ div.msgBoxButtons input[type="button"] {
     position: absolute;
     width: 75%;
 }
+
 .container2 {
     transform: rotateZ(45deg);
 }
 .container3 {
     transform: rotateZ(90deg);
 }
+
 .circle1 {
     left: 0;
     top: 0;
@@ -412,6 +440,7 @@ div.msgBoxButtons input[type="button"] {
     bottom: 0;
     left: 0;
 }
+
 .container2 .circle1 {
     animation-delay: -1.1s;
 }
@@ -445,6 +474,7 @@ div.msgBoxButtons input[type="button"] {
 .container3 .circle4 {
     animation-delay: -0.1s;
 }
+
 @keyframes bouncedelay {
 	0%, 80%, 100% {
 		transform: scale(0);

@@ -31,6 +31,7 @@
 .cart .remove:hover {
     cursor: pointer;
 }
+
 #addAnimation {
     left: 98px;
     position: absolute;
@@ -43,10 +44,9 @@
 
 .total {
     color: #fff;
-    margin: 11px 0 0;
-	margin-top:15px;
-    padding-right:15px;
-	font-size:12px;
+    font-size: 12px;
+    margin: 15px 0 0;
+    padding-right: 15px;
     text-align: right;
     visibility: hidden;
 }
@@ -56,8 +56,8 @@
     margin: 0 7.5px 7.5px 0;
 }
 
-#cartcontent{
-	width:100%;
+#cartcontent {
+    width: 100%;
 }
 
 #space {
@@ -65,27 +65,30 @@
 }
 
 .cart table tr {
-	height:2px;
-}
-.cart table tr td div {
-	font-size:10px;	
-}
-.cart table tr td:first-child div {
-	width:75px;
-	margin-left:3px;
+    height: 2px;
 }
 
-.cart table tr td .X{
+.cart table tr td div {
+    font-size: 10px;
+}
+
+.cart table tr td:first-child div {
+    margin-left: 2px;
+    width: 72px;
+}
+
+.cart table tr td .X {
     background: black none repeat scroll 0 0;
     border-radius: 30px;
     color: #fff;
     font-size: 7.5px;
     font-weight: bold;
+    line-height: 16.5px;
+    margin-left: 3px;
     opacity: 0.9;
-	width:93%;
-	margin-left:3px;
-	line-height: 16.5px;
+    width: 93%;
 }
+
 .X:hover {
     cursor: pointer;
 }
