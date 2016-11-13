@@ -4,25 +4,41 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		
 		<title>Flying Dutchman</title>
-
-		<link rel="stylesheet" href="view/styles/css/general.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="view/styles/css/DragAndDrop.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="view/styles/css/cart.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="view/styles/css/animate.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="view/styles/css/msgBoxLight.css" type="text/css" media="screen">
+				
+		<style>
+			#content{
+				position:relative;	
+				width:970px;
+				padding-right:55px;
+				margin:0 auto;
+			}
+			#left{
+				position:relative;
+				left:0;
+				float:left;
+				width:211px;
+				height:487px;
+				margin:0;
+			}
+			#center{
+				position:relative;
+				left:15px;
+				float:left;
+				width:562px;
+				margin:0;
+			}
+			#right{
+				position:relative;
+				left:10px;
+				float:left;
+				width:auto;
+				height:487px;
+				margin:0;
+			}
+		</style>
+		
 		<link rel="stylesheet" href="view/styles/css/menu_styles.css" type="text/css" title="standard" media="screen" >
 		<link rel="alternate stylesheet" href="view/styles/css/menu_styles2.css" type="text/css" title="dark" media="screen" >
-		
-		<script type="text/JavaScript" src="jQuery/jquery-1.11.2.min.js"></script> 
-		<script type="text/JavaScript" src="jQuery/query-ui-1.9.1.custom.min.js"></script> 
-		<script type="text/javascript" src="jQuery/jquery.easyui.min.js"></script>
-		<script type="text/javascript" src="jQuery/jquery.msgBox.js"></script>
-
-		<script type="text/javascript" src="model/mainVariables.js"></script>
-		<script type="text/javascript" src="controller/themesHandler.js"></script>		
-		<script type="text/javascript" src="controller/languagesHandler.js"></script>
-		<script type="text/javascript" src="model/languages.js"></script>
-		
 	</head>	
 
 	<body>
@@ -157,17 +173,103 @@
 				</div> 
 				<div id="hiddenField" style="display:none"><tbody></tbody></div>		
 			</div>
-		</div>	
-
-		<script type="text/javascript" src="view/products_content.js"> </script>
-		<script type="text/javascript" src="controller/productsListHandler.js"></script>
-		<script type="text/javascript" src="model/products.js"></script>
-		<script type="text/javascript" src="view/events.js"> </script>	
-		<script type="text/javascript" src="view/cart.js"> </script>	 
-		<script type="text/javascript" src="controller/cartHandler.js"> </script>	 
-
-		<script> changeLang('en'); </script>
+		</div>	 
 		
+		<script type="text/javascript">
+		
+			if (window.addEventListener)
+			{								
+				window.addEventListener("load", load_css_files('stylesheet','view/styles/css/DragAndDrop.css'));
+				window.addEventListener("load", load_css_files('stylesheet','view/styles/css/cart.css'));
+				window.addEventListener("load", load_css_files('stylesheet','view/styles/css/animate.css'));
+				window.addEventListener("load", load_css_files('stylesheet','view/styles/css/msgBoxLight.css'));
+				window.addEventListener("load", load_js_files());	
+			}
+			else if (window.attachEvent)
+			{		
+				window.attachEvent("onload", load_js_files());		
+				window.attachEvent("onload", load_css_files('stylesheet','view/styles/css/DragAndDrop.css'));
+				window.attachEvent("onload", load_css_files('stylesheet','view/styles/css/animate.css'));
+				window.attachEvent("onload", load_css_files('stylesheet','view/styles/css/msgBoxLight.css'));	
+				window.attachEvent("onload", load_js_files());					
+			}
+			else 
+			{		
+				window.onload = load_css_files('stylesheet','view/styles/css/DragAndDrop.css');
+				window.onload = load_css_files('stylesheet','view/styles/css/animate.css');
+				window.onload = load_css_files('stylesheet','view/styles/css/msgBoxLight.css');
+				window.onload = load_js_files();
+			}
 
-	</body>
+			function loadScript( url, callback ) 
+			{			
+				var script = document.createElement( "script" );
+				script.type = "text/javascript";
+				
+				if(script.readyState)   //IE
+				{ 
+					script.onreadystatechange = function() 
+					{
+						if ( script.readyState === "loaded" || script.readyState === "complete" ) 
+						{
+							script.onreadystatechange = null;
+							if (typeof callback != 'undefined')						
+							{
+								callback();
+							}
+						}
+					};
+				} else {  				//Others
+					script.onload = function() 
+					{
+						if (typeof callback != 'undefined')							
+						{
+							callback();
+						}					
+					};
+				}
+
+			  script.src = url;
+			  document.getElementsByTagName( "head" )[0].appendChild( script );
+			}		
+			
+			function load_js_files()
+			{
+				loadScript('jQuery/jquery-1.11.2.min.js', function() 
+				{
+					loadScript('jQuery/jquery-ui-1.9.1.custom.min.js');
+					loadScript('jQuery/jquery.easyui.min.js');
+					loadScript('jQuery/jquery.msgBox.js');
+					loadScript('model/mainVariables.js');
+					loadScript('controller/themesHandler.js');
+					loadScript('model/languages.js');
+					loadScript('controller/languagesHandler.js');
+					
+					loadScript('view/products_content.js');
+					loadScript('controller/productsListHandler.js');
+					loadScript('model/products.js');
+					loadScript('view/events.js');
+					loadScript('view/cart.js');
+					loadScript('controller/cartHandler.js');				
+										
+				});
+			}
+
+			function load_css_files(style, url)
+			{
+				var cb = function() 
+				{
+					var l = document.createElement('link'); 
+					l.rel = style;
+					l.href = url;
+					var h = document.getElementsByTagName('head')[0]; 
+					h.parentNode.insertBefore(l, h);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(cb);
+				else window.addEventListener('load', cb);			
+			}	
+					
+		</script>
+
 </html>
